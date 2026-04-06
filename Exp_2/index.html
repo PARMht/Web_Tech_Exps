@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Lab Experiment</title>
+    
+    <!-- Bootstrap 5 CSS for Responsive Layout -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS3 Implementation -->
+    <style>
+        /* CSS3: Custom Fonts, Colors, and Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        /* CSS3: Shadows and Transitions */
+        .css3-card {
+            background: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #333;
+        }
+        
+        .css3-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* CSS3: Borders and Gradients */
+        .custom-border {
+            border-left: 5px solid #0d6efd;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        /* Styling for the Resume section */
+        .resume-header {
+            background-color: #1a2634;
+            color: #ecf0f1;
+            padding: 30px;
+            border-radius: 12px 12px 0 0;
+        }
+        
+        .resume-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 4px solid #fff;
+        }
+
+        .nav-tabs .nav-link.active {
+            font-weight: bold;
+            color: #0d6efd;
+            border-bottom: 3px solid #0d6efd;
+            background-color: transparent;
+        }
+
+        .text-muted {
+            color: #adb5bd !important;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold">Experiment: CSS3 & Responsive Web Design</h1>
+        <p class="lead text-muted">Implementation of Resume, Landing Page, and Dynamic JavaScript Elements</p>
+    </div>
+
+    <!-- Bootstrap Nav Tabs -->
+    <ul class="nav nav-tabs mb-4 justify-content-center" id="experimentTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="resume-tab" data-bs-toggle="tab" data-bs-target="#resume" type="button" role="tab" aria-controls="resume" aria-selected="true">Resume Page</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="landing-tab" data-bs-toggle="tab" data-bs-target="#landing" type="button" role="tab" aria-controls="landing" aria-selected="false">Landing Page</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="dropdown-tab" data-bs-toggle="tab" data-bs-target="#dropdown" type="button" role="tab" aria-controls="dropdown" aria-selected="false">Dynamic Dropdown</button>
+        </li>
+    </ul>
+
+    <!-- Tab Content Area -->
+    <div class="tab-content" id="experimentTabsContent">
+        
+        <!-- TASK 1: Resume Webpage -->
+        <div class="tab-pane fade show active" id="resume" role="tabpanel" aria-labelledby="resume-tab">
+            <div class="css3-card mx-auto w-100">
+                <!-- Resume Header -->
+                <div class="resume-header d-flex flex-column flex-md-row align-items-center justify-content-between">
+                    <div class="text-center text-md-start mb-3 mb-md-0">
+                        <h2 class="mb-0">Prem Mehta</h2>
+                        <p class="fs-5 mb-1 text-info">CSE(AI/ML) Engineer</p>
+                        <small>Email: premarmehta@gmail.com | Phone: +91-XXXXXXX52</small>
+                    </div>
+                    <!-- Placeholder avatar -->
+                    <img src="C:\Users\Prem Mehta\Pictures\Wallpapers\bmw-m3-angel-eyes-black-background-5k-3840x2160-896.jpg" alt="Profile" class="rounded-circle resume-img css3-card">
+                </div>
+                
+                <!-- Resume Body using Bootstrap Grid System -->
+                <div class="row p-4">
+                    <!-- Left Column -->
+                    <div class="col-md-4 border-end pe-md-4">
+                        <h5 class="text-primary mb-3 custom-border ps-2">Skills</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">Programming: C++, Python, JavaScript</li>
+                            <li class="mb-2">Web Development: HTML, CSS, Bootstrap, basic React</li>
+                            <li class="mb-2">Tools: Git, GitHub, VS Code</li>
+                            <li class="mb-2">Core Concepts: Data Structures & Algorithms, Machine Learning basics</li>
+                            <li class="mb-2">Soft Skills: Fast learner, consistency, analytical thinking, problem-solving</li>
+                        </ul>
+                        
+                        <h5 class="text-primary mt-4 mb-3 custom-border ps-2">Education</h5>
+                        <div class="mb-3">
+                            <h6 class="fw-bold mb-0">B.Tech. CSE(AI/ML)</h6>
+                            <small class="text-muted">Smt Indira Gandhi College of Engineering</small><br>
+                            <small>2024 - 2027 | CGPA: 8.55</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column -->
+                    <div class="col-md-8 ps-md-4 mt-4 mt-md-0">
+                        <h5 class="text-primary mb-3 custom-border ps-2">Professional Objective</h5>
+                        <p class="text-muted">To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills, while contributing to the company's growth.</p>
+                        
+                        <h5 class="text-primary mt-4 mb-3 custom-border ps-2">Projects & Experience</h5>
+                        <div class="mb-4">
+                            <h6 class="fw-bold">AI-based Smart Diet Planner (concept/project)</h6>
+                            <p class="text-muted small mb-1">AI-driven system that generates personalized diet plans based on user health data and goals.</p>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold">Financial Fraud Detection System (ML-based system design)</h6>
+                            <p class="text-muted small mb-1">Machine learning-based system that detects anomalous transactions in real time to prevent financial fraud.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TASK 2: Landing Page -->
+        <div class="tab-pane fade" id="landing" role="tabpanel" aria-labelledby="landing-tab">
+            <!-- Connect With Me Section (Sole Landing Page) -->
+            <div class="hero-section css3-card mx-auto my-4" style="max-width: 800px;">
+                <h1 class="display-4 fw-bold mb-3">Let's Connect!</h1>
+                <p class="lead mt-3 mb-5">I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out to me on my professional networks!</p>
+                <div class="d-flex justify-content-center gap-4 flex-wrap">
+                    <a href="https://www.linkedin.com/in/prem-mehta-7871833b4/" target="_blank" class="btn btn-light btn-lg px-5 rounded-pill shadow fw-bold text-primary">
+                        💼 LinkedIn
+                    </a>
+                    <a href="https://github.com/PARMht" target="_blank" class="btn btn-outline-light btn-lg border-2 px-5 rounded-pill shadow fw-bold">
+                        💻 GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- TASK 3: Dynamic Dropdown Menu -->
+        <div class="tab-pane fade" id="dropdown" role="tabpanel" aria-labelledby="dropdown-tab">
+            <div class="css3-card p-5 mx-auto" style="max-width: 600px;">
+                <h3 class="mb-4 text-center">Explore City Monuments</h3>
+                
+                <div class="mb-4">
+                    <label for="citySelect" class="form-label fw-bold">Select a City:</label>
+                    <select class="form-select form-select-lg" id="citySelect" onchange="displayMonuments()">
+                        <option value="" selected disabled>-- Choose a City --</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">New Delhi</option>
+                        <option value="agra">Agra</option>
+                        <option value="jaipur">Jaipur</option>
+                        <option value="hyderabad">Hyderabad</option>
+                    </select>
+                </div>
+            
+            <!-- Container where JavaScript will inject content -->
+            <div id="monumentResult" class="p-4 bg-dark rounded border border-secondary d-none">
+                <h5 id="resultCityTitle" class="text-primary mb-3 custom-border ps-2"></h5>
+                <ul id="monumentList" class="list-group">
+                        <!-- List items generated dynamically -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JavaScript for Dynamic Dropdown -->
+<script>
+    // Data object mapping cities to their monuments
+    const cityData = {
+        mumbai: ["Gateway of India", "Elephanta Caves", "Chhatrapati Shivaji Maharaj Terminus", "Taj Mahal Palace"],
+        delhi: ["Red Fort", "Qutub Minar", "India Gate", "Lotus Temple", "Humayun's Tomb"],
+        agra: ["Taj Mahal", "Agra Fort", "Fatehpur Sikri"],
+        jaipur: ["Hawa Mahal", "Amber Palace", "City Palace", "Jantar Mantar"],
+        hyderabad: ["Charminar", "Golconda Fort", "Chowmahalla Palace", "Salar Jung Museum"]
+    };
+
+    function displayMonuments() {
+        // 1. Get the selected value from the dropdown
+        const selectElement = document.getElementById('citySelect');
+        const selectedCity = selectElement.value;
+        
+        // 2. Get DOM elements to update
+        const resultContainer = document.getElementById('monumentResult');
+        const titleElement = document.getElementById('resultCityTitle');
+        const listElement = document.getElementById('monumentList');
+        
+        if (selectedCity && cityData[selectedCity]) {
+            // Show the container
+            resultContainer.classList.remove('d-none');
+            
+            // Format city name for title (e.g., "mumbai" -> "Mumbai")
+            const formattedCityName = selectedCity.charAt(0).toUpperCase() + selectedCity.slice(1);
+            titleElement.innerText = `Famous Monuments in ${formattedCityName}:`;
+            
+            // Clear existing list
+            listElement.innerHTML = '';
+            
+            // Generate list items dynamically
+            const monuments = cityData[selectedCity];
+            monuments.forEach(monument => {
+                const li = document.createElement('li');
+                // Removed padding from li, added to anchor tag below so the whole area is clickable
+                li.className = 'list-group-item list-group-item-action css3-card mb-2 border-0 p-0';
+                
+                // Create a Google Search URL
+                const searchQuery = encodeURIComponent(`${monument} ${selectedCity}`);
+                const googleSearchUrl = `https://www.google.com/search?q=${searchQuery}&tbm=isch`; // &tbm=isch opens Google Images directly
+                
+                // Add the link inside the list item
+                li.innerHTML = `
+                    <a href="${googleSearchUrl}" target="_blank" class="d-block w-100 text-light text-decoration-none p-3">
+                        📌 ${monument}
+                        <span class="float-end text-muted small">🔍 View Images</span>
+                    </a>
+                `;
+                listElement.appendChild(li);
+            });
+        } else {
+            // Hide container if no valid selection
+            resultContainer.classList.add('d-none');
+        }
+    }
+</script>
+
+</body>
+</html>
