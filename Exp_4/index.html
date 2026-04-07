@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM & jQuery Experiment</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            function changeContent() {
+                document.getElementById("text").innerHTML = "Content changed!";
+            }
+            $(document).ready(function(){
+                $("#hideBtn").click(function(){
+                    $("#box").hide();
+                });
+                $("#showBtn").click(function(){
+                    $("#box").show();
+                });
+                $("#toggleBtn").click(function(){
+                    $("#box").toggle();
+                });
+                $("#animateBtn").click(function(){
+                    $("#box").animate({left: '250px', opacity: '0.5', height: '150px', width: '150px'});
+                });
+            });
+        </script>
+        <style>
+            #box {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="text">Original Content</h2>
+        <button onclick="changeContent()">Change Content</button>
+        <br><br>
+        <div id="box"></div>
+        <br>
+        <button id="hideBtn">Hide</button>
+        <button id="showBtn">Show</button>
+        <button id="toggleBtn">Toggle</button>
+        <button id="animateBtn">Animate</button>
+    </body>
+</html>

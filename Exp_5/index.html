@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AJAX Example</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            function fetchData() {
+                $.ajax({
+                    url: 'https://api.agify.io/?name=Prem',
+                    method: 'GET',
+                    success: function(data) {
+                        document.getElementById('result').innerHTML = "Name: " + data.name + "<br>Age: " + data.age;
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <h2>AJAX Data Fetch</h2>
+        <button onclick="fetchData()">Fetch Data</button>
+        <p id="result"></p>
+    </body>
+</html>
