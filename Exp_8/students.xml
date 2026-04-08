@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students SYSTEM "students.dtd">
+<?xml-stylesheet type="text/xsl" href="students.xsl"?>
+<students>
+  <student id="S01">
+    <name>Prem Mehta</name>
+    <department>CSE (AIML)</department>
+    <year>Second Year</year>
+  </student>
+  <student id="S02">
+    <name>Shiv Kumar</name>
+    <department>Information Technology</department>
+    <year>First Year</year>
+  </student>
+</students>
